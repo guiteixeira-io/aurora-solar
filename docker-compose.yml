@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  wordpress:
+  aurorasolar:
     image: wordpress:latest
     container_name: aurorasolar-wordpress
     restart: always
@@ -13,9 +13,9 @@ services:
     networks:
       - sigma-net
     depends_on:
-      - db
+      - aurorasolar-db
 
-  db:
+  aurorasolar-db:
     image: mariadb:10.6
     container_name: aurorasolar-db
     restart: always
