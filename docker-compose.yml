@@ -1,7 +1,8 @@
 
 services:
   aurorasolar:
-    image: wordpress:latest
+    image: aurorasolar-wordpress
+    build: .
     container_name: aurorasolar-wordpress
     restart: always
     ports:
